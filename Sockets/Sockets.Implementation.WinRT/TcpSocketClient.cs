@@ -57,12 +57,12 @@ namespace Sockets.Plugin
         {
             get
             {
-                return _backingStreamSocket.NoDelay;
+                return _backingStreamSocket.Control.NoDelay;
             }
 
             set
             {
-                _backingStreamSocket.NoDelay = value;
+                _backingStreamSocket.Control.NoDelay = value;
             }
         }
 
