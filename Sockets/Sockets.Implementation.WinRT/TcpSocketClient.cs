@@ -50,6 +50,22 @@ namespace Sockets.Plugin
             _bufferSize = bufferSize;
         }
 
+ 	/// <summary>
+        ///     Exposes the NoDeay property to control Nagle's algorithm.
+        /// </summary>
+        public bool NoDelay
+        {
+            get
+            {
+                return _backingStreamSocket.NoDelay;
+            }
+
+            set
+            {
+                _backingStreamSocket.NoDelay = value;
+            }
+        }
+
         /// <summary>
         ///     Establishes a TCP connection with the endpoint at the specified address/port pair.
         /// </summary>

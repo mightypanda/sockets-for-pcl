@@ -31,13 +31,11 @@ namespace Sockets.Plugin
             throw new NotImplementedException(PCL.BaitWithoutSwitchMessage);
         }
 
-        /// <summary>
-        ///     Establishes a TCP connection with the endpoint at the specified address/port pair.
+        
+         /// <summary>
+        ///     Exposes the NoDeay property to control Nagle's algorithm.
         /// </summary>
-        /// <param name="address">The address of the endpoint to connect to.</param>
-        /// <param name="port">The port of the endpoint to connect to.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel the operation.</param>
-        public Task ConnectAsync(string address, int port, bool secure = false, CancellationToken cancellationToken = default(CancellationToken))
+        public bool NoDelay
         {
             throw new NotImplementedException(PCL.BaitWithoutSwitchMessage);
         }

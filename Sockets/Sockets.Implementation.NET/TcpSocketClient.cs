@@ -35,6 +35,25 @@ namespace Sockets.Plugin
             _backingTcpClient = new TcpClient();
         }
 
+         /// <summary>
+        ///     Exposes the NoDeay property to control Nagle's algorithm.
+        /// </summary>
+        public bool NoDelay
+        {
+            get
+            {
+                return _backingTcpClient.NoDelay;
+            }
+
+            set
+            {
+                _backingTcpClient.NoDelay = value;
+            }
+        }
+
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TcpSocketClient"/> class.
         /// </summary>

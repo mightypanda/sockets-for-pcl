@@ -13,6 +13,11 @@ namespace Sockets.Plugin.Abstractions
     /// </summary>
     public interface ITcpSocketClient : IDisposable
     {
+ 		/// <summary>
+        ///     Exposes the NoDeay property to control Nagle's algorithm.
+        /// </summary>
+        bool NoDelay { get; set; }
+
         /// <summary>
         ///     Establishes a TCP connection with the endpoint at the specified address/port pair.
         /// </summary>
